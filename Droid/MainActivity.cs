@@ -34,7 +34,7 @@ namespace hello.Droid
 	    {
             var phone = _phoneEdit.Text;
 	        var gsmService = new GsMService();
-	        var result = await gsmService.Check(phone);
+	        var result = await gsmService.CheckAsync(phone);
 	        if (result.Success)
 	        {
 	            Toast.MakeText(this, string.Format("{0}: {1}",phone,result.Data),ToastLength.Long).Show();

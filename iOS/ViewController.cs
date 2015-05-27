@@ -29,7 +29,7 @@ namespace hello.iOS
 	    {
             var phone = phoneTxtField.Text;
             var gsmService = new GsMService();
-            var result = await gsmService.Check(phone);
+            var result = await gsmService.CheckAsync(phone);
             if (result.Success)
             {
                 BTProgressHUD.ShowSuccessWithStatus(string.Format("{0}: {1}", phone, result.Data)); 

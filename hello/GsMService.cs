@@ -10,7 +10,7 @@ namespace hello
 	{
 	    private const string _apiUrlFormat = "http://phone.flatplanet.pl/api/PhoneService/{0}";
 
-	    public async Task<GsmCheckResult> Check(string phoneNumber)
+	    public async Task<GsmCheckResult> CheckAsync(string phoneNumber)
         {
             using (var httpClient = new HttpClient(new NativeMessageHandler()))
             {
